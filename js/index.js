@@ -37,6 +37,12 @@ const siteContent = {
   },
 };
 
+// const html = document.querySelector('html');
+
+// const script = document.createElement('script');
+// html.appendChild(script);
+
+
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
@@ -112,3 +118,66 @@ body[0].style.background = '#708090';
 body[0].style.padding = '0 5% 5% 5%';
 
 midImg.style.width = "100%";
+
+const body1 = document.querySelector('.container');
+
+
+
+
+
+
+
+function showOverlay() {
+  const overlay = document.createElement('div');
+  // body1.parentNode.insertBefore(overlay, body1);
+  // overlay.appendChild(body1);
+  body1.appendChild(overlay);
+  overlay.style.position = 'fixed';
+  overlay.style.display = "block";
+  overlay.style.zIndex = 3;
+  overlay.style.backgroundColor = 'rgba(74,55,55,.5)';
+  overlay.style.width = '100%';
+  overlay.style.height = '100%';
+  overlay.style.top = 0;
+  overlay.style.bottom = 0;
+  overlay.style.left = 0;
+  overlay.style.right = 0;
+  overlay.style.display = "flex";
+  overlay.style.justifyContent = "center";
+  overlay.style.alignItems = "center";
+
+  const popDiv = document.createElement('div');
+  overlay.appendChild(popDiv);
+  popDiv.style.width = '400px';
+  popDiv.style.margin = '0 auto';
+  popDiv.style.display = 'flex';
+  popDiv.style.justifyContent = 'center';
+  popDiv.style.alignItems = 'center';
+  popDiv.style.height = '400px';
+  popDiv.style.backgroundColor = "blue";
+
+  const button2 = document.createElement('button');
+  popDiv.appendChild(button2);
+
+  // function disappear() {
+  //   popDiv.style.display = 'none';
+  // }
+
+  button2.style.width = "40%";
+  button2.style.height = '100px';
+  button2.style.textContent = 'Sign Up';
+  button2.style.color = 'black';
+  // button2.setAttribute('onclick', disappear());
+  // button2.style.
+}
+
+//Add Event Listener
+
+const start = document.createElement('div');
+start.textContent = "Let's get started!";
+
+button.addEventListener('click', (event) => {
+  button.parentNode.appendChild(start);
+})
+
+// window.onload = setTimeout(showOverlay, 1000);
