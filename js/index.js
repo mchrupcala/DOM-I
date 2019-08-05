@@ -1,6 +1,3 @@
-// let logo = document.getElementById("logo-img");
-// logo.setAttribute('src', siteContent["nav"]["img-src"])
-
 const siteContent = {
   "nav": {
     "nav-item-1": "Services",
@@ -61,3 +58,21 @@ button.textContent = siteContent["cta"]["button"];
 
 const ctaImg = document.getElementById('cta-img');
 ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
+
+const h4 = document.querySelectorAll('.text-content h4');
+console.log(h4);
+h4[0].textContent = siteContent["main-content"]["features-h4"];
+h4[1].textContent = siteContent["main-content"]["about-h4"];
+h4[2].textContent = siteContent["main-content"]["services-h4"];
+h4[3].textContent = siteContent["main-content"]["product-h4"];
+h4[4].textContent = siteContent["main-content"]["vision-h4"];
+
+const mainContent = document.querySelectorAll('.text-content p');
+mainContent[0].textContent = siteContent["main-content"]["features-content"];
+mainContent[1].textContent = siteContent["main-content"]["about-content"];
+mainContent[2].textContent = siteContent["main-content"]["services-content"];
+mainContent[3].textContent = siteContent["main-content"]["product-content"];
+mainContent[4].textContent = siteContent["main-content"]["vision-content"];
+
+const midImg = document.getElementById('middle-img');
+midImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
