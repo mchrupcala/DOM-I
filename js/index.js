@@ -1,3 +1,6 @@
+// let logo = document.getElementById("logo-img");
+// logo.setAttribute('src', siteContent["nav"]["img-src"])
+
 const siteContent = {
   "nav": {
     "nav-item-1": "Services",
@@ -40,3 +43,21 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+//Updating the nav bar.
+const nav = document.querySelectorAll('a');
+
+let i = 1;
+nav.forEach(attrs => {
+  attrs.textContent = siteContent["nav"]["nav-item-"+[i]];
+  i++;
+})
+
+const h1 = document.querySelector('h1');
+h1.textContent = siteContent["cta"]["h1"];
+
+const button = document.querySelector('button');
+button.textContent = siteContent["cta"]["button"];
+
+const ctaImg = document.getElementById('cta-img');
+ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
