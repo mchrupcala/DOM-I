@@ -50,6 +50,8 @@ nav.forEach(attrs => {
   i++;
 })
 
+
+//Changed the CTA section.
 const h1 = document.querySelector('h1');
 h1.textContent = siteContent["cta"]["h1"];
 
@@ -59,6 +61,8 @@ button.textContent = siteContent["cta"]["button"];
 const ctaImg = document.getElementById('cta-img');
 ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
 
+
+//Updating the main content
 const h4 = document.querySelectorAll('.text-content h4');
 console.log(h4);
 h4[0].textContent = siteContent["main-content"]["features-h4"];
@@ -85,5 +89,26 @@ contact[0].textContent = siteContent["contact"]['address'];
 contact[1].textContent = siteContent["contact"]['phone'];
 contact[2].textContent = siteContent["contact"]['email'];
 
+//Updated the footer.
 const footer = document.querySelector('footer p');
 footer.textContent = siteContent['footer']['copyright'];
+
+
+nav.forEach(attrs => {
+  attrs.style.color = 'green';
+})
+
+const navElement = document.querySelector('nav');
+
+newA = document.createElement('a');
+newB = document.createElement('a');
+navElement.prepend(newA);
+navElement.appendChild(newB);
+newA.innerText = 'Pick Me!';
+newB.innerText = 'No, Me!';
+
+const body = document.getElementsByClassName('container');
+body[0].style.background = '#708090';
+body[0].style.padding = '0 5% 5% 5%';
+
+midImg.style.width = "100%";
