@@ -44,7 +44,7 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 //Updating the nav bar.
 const nav = document.querySelectorAll('a');
 
-let i = 1;
+var i = 1;
 nav.forEach(attrs => {
   attrs.textContent = siteContent["nav"]["nav-item-"+[i]];
   i++;
@@ -76,3 +76,14 @@ mainContent[4].textContent = siteContent["main-content"]["vision-content"];
 
 const midImg = document.getElementById('middle-img');
 midImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+const contactH4 = document.querySelector('.contact h4');
+contactH4.textContent = siteContent['contact']['contact-h4'];
+
+const contact = document.querySelectorAll('.contact p');
+contact[0].textContent = siteContent["contact"]['address'];
+contact[1].textContent = siteContent["contact"]['phone'];
+contact[2].textContent = siteContent["contact"]['email'];
+
+const footer = document.querySelector('footer p');
+footer.textContent = siteContent['footer']['copyright'];
