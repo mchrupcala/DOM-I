@@ -132,6 +132,7 @@ function showOverlay() {
   // body1.parentNode.insertBefore(overlay, body1);
   // overlay.appendChild(body1);
   body1.appendChild(overlay);
+  overlay.setAttribute('class', 'removePop');
   overlay.style.position = 'fixed';
   overlay.style.display = "block";
   overlay.style.zIndex = 3;
@@ -159,15 +160,22 @@ function showOverlay() {
   const button2 = document.createElement('button');
   popDiv.appendChild(button2);
 
+
+  button2.addEventListener('click', (event) => {
+  overlay.style.display = 'none';
+})
+
   // function disappear() {
-  //   popDiv.style.display = 'none';
+  //   let removePop = document.querySelector('removePop');
+  //   removePop.style.display = 'hidden';
   // }
 
-  button2.style.width = "40%";
-  button2.style.height = '100px';
-  button2.style.textContent = 'Sign Up';
+  button2.style.width = "25%";
+  button2.style.height = '50px';
+  button2.textContent = 'Sign Up';
   button2.style.color = 'black';
-  // button2.setAttribute('onclick', disappear());
+  button2.style.background = 'grey';
+  // button2.setAttribute('onclick', 'disappear()');
   // button2.style.
 }
 
@@ -180,4 +188,4 @@ button.addEventListener('click', (event) => {
   button.parentNode.appendChild(start);
 })
 
-// window.onload = setTimeout(showOverlay, 1000);
+window.onload = setTimeout(showOverlay, 2500);
